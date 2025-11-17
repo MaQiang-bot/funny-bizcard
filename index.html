@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马强 - 个人简介</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .photo-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .photo-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .photo-placeholder {
+            height: 300px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-weight: bold;
+        }
+        
+        .photo-caption {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .info-section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .info-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            margin-bottom: 15px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        
+        .mbti-breakdown {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .skill-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .awards-list {
+            list-style-type: none;
+        }
+        
+        .awards-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .awards-list li:before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+        
+        .quote {
+            font-style: italic;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>马强</h1>
+            <p class="subtitle">中国科学院大学博士研究生 · 著名空想家 · 人生如戏影帝</p>
+        </header>
+        
+        <div class="photo-grid">
+            <div class="photo-item">
+                <div class="photo-placeholder">证件照 (media/image1.png)</div>
+                <div class="photo-caption">证件照</div>
+            </div>
+            <div class="photo-item">
+                <div class="photo-placeholder">身材照 (media/image2.jpeg)</div>
+                <div class="photo-caption">身材照</div>
+            </div>
+            <div class="photo-item">
+                <div class="photo-placeholder">生活照 (media/image3.jpeg)</div>
+                <div class="photo-caption">生活照 - 小孩戴着帽子</div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h2>基本信息</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">姓名：</span>马强
+                </div>
+                <div class="info-item">
+                    <span class="info-label">别名：</span>小强
+                </div>
+                <div class="info-item">
+                    <span class="info-label">曾用名：</span>马强
+                </div>
+                <div class="info-item">
+                    <span class="info-label">籍贯：</span>喜德
+                </div>
+                <div class="info-item">
+                    <span class="info-label">星座：</span>银河系
+                </div>
+                <div class="info-item">
+                    <span class="info-label">学籍：</span>中国科学院大学博士研究生（但看上去不像）
+                </div>
+                <div class="info-item">
+                    <span class="info-label">MBTI：</span>POOR
+                    <div class="mbti-breakdown">
+                        <strong>POER解析：</strong><br>
+                        P - Professional（假装专业）<br>
+                        O - Out-of-control（完全掌控不住进度）<br>
+                        E - Obviously-confused（显而易见的困惑）<br>
+                        R - Regret-everything（包括读博）
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h2>主攻方向</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">·</span> 北京时间中午十二点精准授时（掐点吃饭）
+                </div>
+                <div class="info-item">
+                    <span class="info-label">·</span> 三维空间精准可信定位（精准找到自己的床位）
+                </div>
+                <div class="info-item">
+                    <span class="info-label">·</span> 人类夜间躯体思想漫游研究（失眠）
+                </div>
+                <div class="info-item">
+                    <span class="info-label">·</span> 偶尔认真；大部分时间装懂；其余时间怀疑人生（这方面有丰富经验）
+                </div>
+                <div class="info-item">
+                    <span class="info-label">·</span> 具体做什么导师比我更不清楚
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h2>获奖荣誉</h2>
+            <ul class="awards-list">
+                <li>连续半学期蝉联一年级优秀三好学生</li>
+                <li>2008年感动中国特别奖获得者</li>
+                <li>世界500强企业观察员</li>
+                <li>研究生补贴守望者</li>
+                <li>人类退步推动者</li>
+                <li>21世纪著名空想家</li>
+                <li>银马奖影帝-代表作品《人生如戏》</li>
+            </ul>
+        </div>
+        
+        <div class="info-section">
+            <h2>个人技能</h2>
+            <p>会把简单问题复杂化，也能把复杂问题放到明天再看</p>
+            <div class="skills-list">
+                <span class="skill-tag">精准授时</span>
+                <span class="skill-tag">空间定位</span>
+                <span class="skill-tag">夜间研究</span>
+                <span class="skill-tag">问题复杂化</span>
+                <span class="skill-tag">拖延术</span>
+                <span class="skill-tag">演技</span>
+            </div>
+        </div>
+        
+        <div class="quote">
+            "人生格言：没想好！"
+        </div>
+        
+        <footer>
+            <p>© 2023 马强 - 本页面内容纯属娱乐，如有雷同，纯属巧合</p>
+        </footer>
+    </div>
+</body>
+</html>
